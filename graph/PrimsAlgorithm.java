@@ -65,13 +65,9 @@ public class PrimsAlgorithm {
         Arrays.fill(cost, Integer.MAX_VALUE);
         cost[0] = 0;
         parent[0] = -1;
-        int totalCost=0;
-        for (int i = 0; i < V-1; i++) {
+        for (int i = 1; i < V; i++) {
             int u=findMinEdgeVertex(cost,visited);
             visited[u]=true;
-            if(parent[u]!=-1){
-                totalCost+=cost[u];
-            }
             for(Edge edge:graph.get(u)) {
                 if (!visited[edge.target] && edge.cost < cost[edge.target]) {
                     cost[edge.target] = edge.cost;

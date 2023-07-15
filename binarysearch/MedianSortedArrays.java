@@ -1,4 +1,11 @@
 class MedianSortedArrays {
+    public static void main(String[] args) {
+        double medianSortedArrays = new MedianSortedArrays().findMedianSortedArrays(new int[]{4, 5, 6, 9, 10}, new int[]{
+                1, 3, 4, 5, 6, 7, 8
+        });
+        //1 3 4 4 5 5 6 6 7 8 9 10
+        System.out.println(medianSortedArrays);
+    }
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if(nums1.length>nums2.length){
             return findMedianSortedArrays(nums2,nums1);

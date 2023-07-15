@@ -1,4 +1,4 @@
-package traversal.posorder;
+package traversal.posorder.recursion;
 
 import traversal.TreeFactory;
 import traversal.TreeNode;
