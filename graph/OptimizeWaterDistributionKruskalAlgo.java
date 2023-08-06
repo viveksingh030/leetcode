@@ -46,8 +46,8 @@ class OptimizeWaterDistributionKruskalAlgo {
     }
     public int minCostToSupplyWater(int n, int[] wells, int[][] pipes) {
         List<Edge> arr=new ArrayList<>();
-        for(int[] edge:pipes){
-            arr.add(new Edge(edge[0],edge[1],edge[2]));
+        for(int[] pipe:pipes){
+            arr.add(new Edge(pipe[0],pipe[1],pipe[2]));
         }
         for(int i=1;i<=n;i++){
              arr.add(new Edge(0,i,wells[i-1]));

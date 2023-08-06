@@ -12,12 +12,7 @@ public class CountingSort {
     }
 
     void sort(int []arr){
-        OptionalInt reduce = Arrays.stream(arr).reduce((a, b) -> {
-            if (a > b) {
-                b = a;
-            }
-            return b;
-        });
+        OptionalInt reduce = Arrays.stream(arr).reduce(Math::max);
         int max=reduce.getAsInt();
         int count[]=new int[max+1];
         for(int num:arr){

@@ -12,7 +12,7 @@ public class PreOrderTraversal {
     private static void preorderTraversal(TreeNode<Integer> root) {
         if (root != null) {
             System.out.print(root.val+" ");
-            preorderTraversal(root.right);
+            preorderTraversal(root.left);
             preorderTraversal(root.right);
         }
     }
